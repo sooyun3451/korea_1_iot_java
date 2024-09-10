@@ -40,7 +40,6 @@ class Teacher {
  }
 }
 
-
 public class Example2 {
 
 }
