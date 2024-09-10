@@ -4,6 +4,7 @@ package chapter12.model;
 
 // 책 객체를 정의하는 클래스 
 // : 제목, 저자, 출판사 
+
 public class Book {
 	// 인스턴스 변수
 	private String title;
@@ -33,6 +34,6 @@ public class Book {
 	// object 안에 있는 toString()메서드 재정의 
 	@Override
 	public String toString() {
-		return "Title" + title + "Author" + author + "Publisher" + publisher;
+		return "Title: " + title + " Author: " + author + " Publisher: " + publisher;
 	}
 }
