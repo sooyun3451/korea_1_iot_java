@@ -17,5 +17,21 @@ public class OrderView {
 		System.out.print("Your Choice: ");
 		return scanner.nextLine();
 	}
+	
+	// 주문 수량을 사용자에게 요청하는 메서드 
+	public int getQuantity() {
+		System.out.println("Enter Quantity");
+		return scanner.nextInt();
+	}
+	
+	// 총 주문 가격을 표시하는 메서드 
+	public void displayTotalPrice(int price) {
+		System.out.println("Total price: " + price + " KRW");
+	}
+	
+	// 주문 완료 메시지 표시 메서드 
+	public void displayOrderComplete() {
+		System.out.println("Order has been completed");
+	}
 
 }
