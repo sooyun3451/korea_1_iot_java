@@ -1,7 +1,5 @@
 package chapter16;
 
-import chapter16.Zoo.Lion;
-
 // 동물들의 행동을 졍의할 Animal 인터페이스 정의 
 interface Animal {
 	void performAction(); // 동물의 행동을 정의하는 추상 메서드
@@ -19,7 +17,7 @@ class Zoo {
 		public Lion(String day) {
 			this.day = day;
 		}
-
+		
 		@Override
 		public void performAction() {
 			// a.equalsIgnoreCase(b)
@@ -27,26 +25,22 @@ class Zoo {
 			if (day.equalsIgnoreCase("Sunday")) {
 				// 일요일 - 사냥
 				class SundayAction implements Animal {
-
 					@Override
 					public void performAction() {
 						System.out.println("사자는 사냥합니다.");
 					}
 				}
-
 				// 내부 클래스 객체 생성 후 행동 수행
 				Animal specialAction = new SundayAction();
 				specialAction.performAction();
-
 			} else {
 				// 람다표현식을 사용하여 평소 행동을 정의
 				Animal regularAction = () -> System.out.println("사자가 포효합니다.");
 				regularAction.performAction();
 			}
-
 		}
 	}
-	
+
 	// 원숭이 클래스
 	static class Monkey implements Animal {
 		@Override
@@ -55,26 +49,25 @@ class Zoo {
 			action.performAction();
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Animal lion = new Lion("Sunday");
 		lion.performAction(); // 사자는 사냥합니다.
-		
+
 		Animal lion2 = new Lion("Monday");
 		lion2.performAction(); // 사자가 포효합니다.
-		
+
 		Animal monkey = new Monkey();
 		monkey.performAction(); // 원숭이는 나무를 타고 오릅니다.
-		
+
 		Animal penguin = new Animal() {
-			// 익명클래스 - 팽귄의 행동 정의 
+			// 익명클래스 - 팽귄의 행동 정의
 			@Override
 			public void performAction() {
-				// 익명클래스 내부에서 펭귄의 행동 정의 
+				// 익명클래스 내부에서 펭귄의 행동 정의
 				System.out.println("귄은 뒤뚱뒤뚱 걷습니다.");
 			}
 		};
 		penguin.performAction(); // 귄은 뒤뚱뒤뚱 걷습니다.
 	}
-
 }

@@ -1,5 +1,7 @@
 package chapter15;
 
+import java.util.List;
+
 // Main 클래스
 // : 프로젝트 실행 클래스 
 public class Main {
@@ -27,15 +29,28 @@ public class Main {
 		// Book 클래스의 인스턴스
 		
 		// ============================================================== //
+		// 도서관 생성
+		Library library = new Library();
+		
+		
 		// 책 추가
-		Book book1 = new PaperBook("자바", "이승아", "1234", 150);
+		Book book1 = new PaperBook("자바 Hi", "이승아", "1234", 150);
 		Book book2 = new PaperBook("파이썬", "이도경", "2345", 300);
 		Book book3 = new PaperBook("C언어", "김명진", "3456", 250);
 
-		Book book4 = new EBook("안녕", "구희연", "111", "www.example.com");
+		Book book4 = new EBook("안녕Hi", "구희연", "111", "www.example.com");
 		Book book5 = new EBook("반가워", "윤대휘", "222", "www.example.com");
-		Book book6 = new EBook("Hello", "김소빈", "333", "www.example.com");
+		Book book6 = new EBook("Hello", "이승아", "333", "www.example.com");
 		Book book7 = new EBook("Hi", "정규민", "444", "www.example.com");
+		
+		library.addBook(book1);
+		library.addBook(book2);
+		library.addBook(book3);
+		library.addBook(book4);
+		library.addBook(book5);
+		library.addBook(book6);
+		library.addBook(book7);
+		
 		
 		// 회원 생성
 		Member member1 = new Member("001", "박성욱");
@@ -59,5 +74,20 @@ public class Main {
 			System.out.println(e.getMessage());
 		}
 		
+		System.out.println("제목으로 Hi 책 검색");
+		List<Book> foundBooksByTitle = library.searchBooksByTitle("Hi");
+		
+		for(Book book: foundBooksByTitle) {
+			System.out.println(book.getTitle() + " / " + book.getAuthor()); 
+		}
+		// Hi / 정규민
+		
+		System.out.println("저자로 이승아검색");
+		List<Book> foundBooksByAuthor = library.searchBooksByAuthor("이승아");
+		for(Book book: foundBooksByAuthor) {
+			System.out.println(book.getTitle() + " / " + book.getAuthor());
+		}
+		// Hello / 이승아
+		// 자바 Hi / 이승아
 	}
 }
