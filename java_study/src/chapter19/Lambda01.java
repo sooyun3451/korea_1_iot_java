@@ -8,9 +8,8 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
-// 람다표현식(Lambda Expression)
+// === 람다표현식(Lambda Expression) ===
 // : 자바 8에서 도입된 함수형 프로그래밍 스타일의 표현식 
 // >> 익명 함수를 간결하게 표현하는 방법(가독성, 간결성 향상)
 
