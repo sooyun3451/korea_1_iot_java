@@ -99,7 +99,8 @@ public class StreamMain {
 		// nameStream.sorted().forEach(name -> System.out.println("name: " + name));
 		
 		System.out.println("빌더를 이용한 스트림 생성");
-		nameStream.sorted((name1, name2) -> String.CASE_INSENSITIVE_ORDER.compare(name2, name1)) // CASE_INSENSITIVE_ORDER.compare: 대소문자 구분없이 정렬 
+		nameStream.sorted((name1, name2) -> String.CASE_INSENSITIVE_ORDER.compare(name2, name1)) 
+		// CASE_INSENSITIVE_ORDER.compare: 대소문자 구분없이 정렬 
 		.forEach(name -> System.out.println("name: " + name));
 		
 		

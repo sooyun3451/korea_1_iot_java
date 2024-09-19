@@ -1,7 +1,6 @@
 package chapter18;
 
-// 빌더(Builder) 패턴 
-
+// 빌더(Builder) 패턴
 // : 복잡한 객체 생성을 단순화하는 생성 패턴 
 // - 객체의 생성자 인수가 많을 때 가독성이 떨어지는 문제를 보완 
 // - 체이닝 방식을 사용하여 가독성 있고 유연한 객체 생성 
@@ -18,7 +17,7 @@ package chapter18;
 // 2) 필수 속성 설정 
 // : 생성자를 통한 필수 속성을 설정 
 
-// 3) 선택정 속성 설정 
+// 3) 선택적 속성 설정 
 // : 체이닝 방식으로 선택적 속성을 설정할 수 있는 메서드 추가 
 
 // 4) build 메서드 
@@ -84,6 +83,7 @@ class Product {
 			return new Product(this);
 		}
 	}
+	
 // === 빌더 패턴에서는 Getter/Setter가 필요하지 않음
 // 데이터의 값을 할당하는 Setter
 //	public void setName(String name) {
