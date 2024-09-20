@@ -1,4 +1,4 @@
-package chapter20.Library;
+package chapter20.library;
 
 // 도서관리시스템 
 // : 순수한 자바를 사용하여 스프링 프레임워크와 유사함 체계로 설계 
