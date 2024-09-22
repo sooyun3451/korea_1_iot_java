@@ -16,6 +16,7 @@ import chapter20.reservation.controller.ReservationController;
  	 - 모델: 사용자, 예약 정보 클래스
  	- 서비스: 예약 관련 비즈니스 로직 처리 
  	- 컨트롤러: 사용자 요청을 처리하고 응답하는 역할 
+ 	- 저장소(리포지토리): 데이터의 처리에 사용, 데이터베이스와의 상호작용을 담당  
  	
  	 3) 프로젝트 구조 
  	 model
@@ -24,6 +25,8 @@ import chapter20.reservation.controller.ReservationController;
  	 - UserService / ReservationService
  	 controller
  	 - ReservationController
+ 	 repository
+ 	 - UserRepository / ReservationRepository
 */
 
 public class Main {
