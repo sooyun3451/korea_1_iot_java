@@ -4,20 +4,20 @@ package 자바기초용어모음;
 // public: 어디에서든지 접근 가능 
 // protected: 동일한패키지, 상속받은 자식클래스에서 접근 가능 
 // default: 동일한 패키지 내에서만 접근 가능 
-// private: 동일한 클래스에서만 접근 가능 
+// private: 동일한 클래스 내에서만 접근 가능 
 
 // static
 // static 변수: 한 클래스에서 공통적인 값을 사용할때 사용  
 // static 메서드: 인스턴스 생성 없이 클래스 이름을 통해 직접 호출 가능 
 
 // final
-// final 변수: 상수, 선언 시 무조건 초기화 
+// final 변수: 상수, 선언 시 반드시 초기화 
 // final 메서드: 오버라이딩 불가능 
 // final 클래스: 상속 불가능 
 
 // abstract
 // abstract 클래스: 추상 클래스, 하나 이상의 추상 메서드를 포함 
-// abstract 메서드: 추상클래스, 구현부가 없다.
+// abstract 메서드: 추상메서드, 구현부가 없다.
 
 // interface VS abstract class
 // interface: 다중 구현이 가능 
@@ -33,7 +33,7 @@ package 자바기초용어모음;
 
 // 오버로딩(Overloading) VS 오버라이딩(Overriding)
 // 오버로딩: 동일한 이름의 메서드의 매개변수의 수 또는 자료형이 다른 것 
-// 오버라이딩: 부모 클래스의 메서드를 "재정의:
+// 오버라이딩: 부모 클래스의 메서드를 "재정의"
 
 // try-catch-finally
 // try: 오류가 날 수 있는 코드를 작성 
